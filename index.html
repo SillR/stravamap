@@ -41,9 +41,16 @@
   }).addTo(map);
     
  // load GeoJSON from an external file
-  $.getJSON("1test.geojson",add(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(1test.geojson).addTo(map);
+L.geoJSON(data, {
+    style: geometryToLayer (feature) {
+        return {color: feature.properties.color};
+    }
+}).bindPopup(addto (layer) {
+    return layer.feature.properties.description;
+}).addTo(map);
+    
+  
+  
   </script>
 
 
