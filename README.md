@@ -1,7 +1,7 @@
-#About
+# About
 Give a short description about the map etc. 
 
 
-##Link to map
+## Link to map
 
 
