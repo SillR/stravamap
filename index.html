@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
 
-    <script src="hydro_s.geojson" type="text/javascript"></script>
+    <script src="1test.geojson" type="text/javascript"></script>
 
 
   
@@ -45,14 +45,9 @@
   }).addTo(map);
     
  // load GeoJSON from an external file
-L.geoJSON(data, {
-    style: geometryToLayer (feature) {
-        return {color: feature.properties.color};
-    }
-}).bindPopup(addto (layer) {
-    return layer.feature.properties.description;
-}).addTo(map);
-    
+var layername = new L.LayerGroup();
+        L.geoJson(1test.geojson, {style: hydrosStyle}).addTo(hydro);
+
   
   
   </script>
