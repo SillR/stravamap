@@ -40,10 +40,20 @@
         <a href="https://carto.com/attribution">CARTO</a>'
   }).addTo(map);
     
-  fetch("1test.geojson").then(res => res.json()).then(data => {
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
+
+
+ $.getJSON("1test.geojson",function(1test.geojson){
+    L.geoJson( klimagutachten, {
+		style: function(feature){
+			return {
+				color: "#e60000",
+				weight: 4,
+				fillColor: "#e60000",
+				fillOpacity: .3
+			};
+		},
+
+    
   </script>
 
 
