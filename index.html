@@ -39,13 +39,13 @@
         OpenStreetMap</a> contributors, &copy;\
         <a href="https://carto.com/attribution">CARTO</a>'
   }).addTo(map);
-
-  </script>
-
  // load GeoJSON from an external file
   $.getJSON("geodata/1test.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data).addTo(map);
+  </script>
+
+
 
 
 </body>
