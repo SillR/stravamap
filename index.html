@@ -38,11 +38,7 @@
       attribution: '&copy; <a href="https://osm.org/copyright">\
         OpenStreetMap</a> contributors, &copy;\
         <a href="https://carto.com/attribution">CARTO</a>'
-  }).addTo(map);
-    
-
-
- $.getJSON("1test.geojson",function(1test.geojson){
+  $.getJSON("1test.geojson",function(1test.geojson){
     L.geoJson( 1test.geojson, {
 		style: function(feature){
 			return {
@@ -51,7 +47,11 @@
 				fillColor: "#e60000",
 				fillOpacity: .3
 			};
-		},
+		},}).addTo(map);
+    
+
+
+ 
 
     
   </script>
